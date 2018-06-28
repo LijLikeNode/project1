@@ -47,7 +47,7 @@
                   <span>{{con.premperiod+'年'}}</span>
                 </li>
               </ul>
-                
+
             </div>
           </div>
 
@@ -73,11 +73,11 @@
               </ul>
             </div>
           </div>
-          
+
 
         </yd-tab-panel>
         <yd-tab-panel label="已达到标准">
-          
+
           <div :class="['table',{'greenBg':index%2!=0}]" v-for="(item,index) in upToStandard.applicants">
             <h1>
               <b></b>
@@ -104,7 +104,7 @@
                   <span>{{con.premperiod+'年'}}</span>
                 </li>
               </ul>
-                
+
             </div>
           </div>
 
@@ -114,14 +114,14 @@
         </yd-tab-panel>
     </yd-tab>
 
-      
+
 
 
     <p class="pop" @touchstart="guide=true">温馨<br/>提示</p>
 
 
 
-      
+
       <div class="suppStyle">本活动最终解释权归华夏保险所有</div>
       <transition name="fade">
         <div class="guide_mask" v-show="guide">
@@ -132,12 +132,12 @@
               <p><b>无长险保单：</b>指客户没有常青树或福临门系列产品；</p>
               <p><b>已达到标准：</b>指客户满足医保通投保标准，直接投保即可。</p>
             </div>
-            
+
           </div>
         </div>
       </transition>
     </div>
-  
+
 </template>
 <script>
 
@@ -184,7 +184,7 @@ export default {
 }
 </script>
 
-<style lang='less' scoped>
+<style lang='less' scoped rel="stylesheet/less">
 @import url(../assets/css/main.less);
 .page{z-index:0;}
 div.container{
@@ -233,7 +233,7 @@ div.container{
   div.suppStyle{
     height:3em;background: @deepRed;text-align:center;color:#fff;line-height:3;position:absolute;bottom:0;width:100%;
   }
-  
+
   div.table{
     padding:7% 5% 5%;
     &.greenBg{
@@ -258,7 +258,7 @@ div.container{
           position:absolute;top:0;right: 0;padding:.2em .3em;border: 1px solid @deepRed;border-radius:5px;font-weight:normal;font-size:.9em;
         }
       }
-      
+
     }
     b{
       position:absolute;left:-5.4%;top:0;background:@deepRed;width:.4em;height:100%;
@@ -271,7 +271,7 @@ div.container{
       ul{
         li{
           // height:2rem;line-height:2;
-          
+
           border:1px solid #eee;border-top:none;
           width:90%;margin-left:5%;
           &.title{
@@ -282,7 +282,7 @@ div.container{
           }
         }
       }
-      
+
     }
   }
   div.table2{
@@ -309,7 +309,7 @@ div.container{
           position:absolute;top:0;right: 0;padding:.2em .3em;border: 1px solid @deepRed;border-radius:5px;font-weight:normal;font-size:.9em;
         }
       }
-      
+
     }
       b{
         position:absolute;left:-5.4%;top:0;background:@deepRed;width:.4em;height:100%;
@@ -332,7 +332,7 @@ div.container{
           // }
         }
       }
-      
+
     }
   }
   .rt{
