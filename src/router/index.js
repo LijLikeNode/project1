@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/components/Index'
+import CqsDB from '@/components/CqsDB'
 
 Vue.use(Router)
 
@@ -11,6 +12,12 @@ Vue.use(Router)
       name: 'index',
       component: Index,
       meta:{txt:'医保通加保'}
+    },
+    {
+      path: '/cqs',
+      name: 'cqs',
+      component: CqsDB,
+      meta:{txt:'精准营销'}
     }
   ]
 });

@@ -9,27 +9,27 @@ import Qs from 'qs';
 // let baseURL = 'http://test.hxlife.com/ssj/opr/cm/';
 //生产环境
 let baseURL = 'http://zmt.ihxlife.com/opr/cm/';
-const ax =async (url,para,mask) => {
-    if(mask) window.popalert.waitstart();
+const ax = async (url, para, mask) => {
+    if (mask) window.popalert.waitstart();
     let param = Qs.stringify(para);
     return axios({
-        baseURL:baseURL,
-        method:para.axType || 'post',
-        url:url,
-        data:para.axType!=='get' ? param : null
-    })
-    .then(function (response) {
-        if(mask) window.popalert.waitend();
-        return response.data;
-    })
-    .catch(function (error) {
-        if(mask){
-            window.popalert.waitend();
-            setTimeout(()=>{
-                window.popalert.fade('网络错误，请稍后重试');
-            },500);
-        }
-    });
+            baseURL: baseURL,
+            method: para.axType || 'post',
+            url: url,
+            data: para.axType !== 'get' ? param : null
+        })
+        .then(function(response) {
+            if (mask) window.popalert.waitend();
+            return response.data;
+        })
+        .catch(function(error) {
+            if (mask) {
+                window.popalert.waitend();
+                setTimeout(() => {
+                    window.popalert.fade('网络错误，请稍后重试');
+                }, 500);
+            }
+        });
 };
 
 export default ax;

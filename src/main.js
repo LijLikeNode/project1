@@ -1,5 +1,7 @@
 import Vue from 'vue';
 import App from './App';
+// require('./assets/util/vconsole.js');
+import store from './store';
 import router from './router';
 import $ from 'jquery';
 import common from './ajaxrequest/common'
@@ -48,6 +50,7 @@ const historyStack = {
 new Vue({
   el: '#app',
   router,
+  store,
   mixins: [historyStack],
   template: '<App :forward="forward"/>',
   components: { App }
